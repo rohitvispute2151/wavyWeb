@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css waves</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        nav{
+            background : linear-gradient(to right , #EF476F      , #ffd166);
+            height: 2rem;
+            padding: 1rem;
+            text-align: center;
+        }
+        section{
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            padding: 100px 20vw;
+            min-height: 400px;
+        }
+        .red{
+            background-color: #EF476F;
+        }
+        .blue{
+            background-color: #26547C;
+        }
+        .yellow{
+            background-color: #ffd166;
+        }
+        .curve{
+            position: absolute;
+            height: 200px;
+            width: 100%;
+            bottom: 0;
+        }
+        .curve::after{
+            content: ' ';
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            border-radius: 50%;
+            background-color: #ffd166;
+            transform: translate(105%,30%);
+        }
+        
+        .curve::before{
+            z-index: 1;
+            content: ' ';
+            position: absolute;
+            height: 100%;
+            width: 55%;
+            border-radius: 50%;
+            background-color: #26547C;
+            transform: translate(-2%,40%);
+        }
+        .curve2{
+            position: absolute;
+            height: 250px;
+            width: 100%;
+            bottom: 0;
+        }
+        .curve2::after{
+            z-index: 1;
+            content: ' ';
+            position: absolute;
+            height: 100%;
+            width: 110%;
+            left: 0;
+            border-radius: 50%;
+            background-color: #ffd166;
+            transform: translate(-21%,60%);
+        }
+        .custom-shape-divider-top-1682232625 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .custom-shape-divider-top-1682232625 svg {
+            position: relative;
+            display: block;
+            width: calc(128% + 1.3px);
+            height: 156px;
+        }
+
+        .custom-shape-divider-top-1682232625 .shape-fill {
+            fill: #EF476F;
+        }
+
+        .custom-shape-divider-top-1682232968 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1682232968 svg {
+    position: relative;
+    display: block;
+    width: calc(168% + 1.3px);
+    height: 181px;
+}
+
+.custom-shape-divider-top-1682232968 .shape-fill {
+    fill: #26547C;
+}
+    </style>
+</head>
+<body>
+    <nav>Lorem ipsum dolor sit amet.</nav>
+    <section class="blue">
+        <h1>waves</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt asperiores eaque fuga esse nisi numquam tempore odit velit dolorum nobis dolore doloremque, deleniti inventore assumenda!</p>
+    </section>
+    <div class="curve"></div>
+
+    <section class="yellow">
+        <h1>waves</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, sequi maiores excepturi laboriosam beatae ipsum dolore nulla quas dolorem animi nam, aspernatur nesciunt sint accusantium!</p>
+        <div class="curve2"></div>
+    </section>
+
+    <section class="red">
+        <h1>waves</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptate ipsa quam corrupti velit dicta, rerum a suscipit incidunt ratione vero unde, facere quod vitae.</p>
+        
+    </section>
+
+    <section class="blue">
+        <h1>waves</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, cum consequatur eaque molestiae, tenetur minus mollitia tempore accusamus enim qui temporibus ratione nam nulla ipsam?</p>
+        <div class="custom-shape-divider-top-1682232625">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="yellow">
+        <h1>waves</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas quisquam praesentium vitae necessitatibus vero error. Veritatis, vitae distinctio quidem nostrum totam aliquid iure eaque consectetur.</p>
+        <div class="custom-shape-divider-top-1682232968">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="red">
+        <h1>waves</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eos mollitia incidunt, accusamus harum quos delectus qui accusantium vel inventore, quasi repellendus totam omnis repellat.</p>
+    </section>
+
+</body>
+</html>
