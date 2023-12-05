@@ -154,7 +154,7 @@ body {
     if(count($_POST)>0){
        mysqli_query($conn,"update crudop set name='" . $_POST['fname'] . "',
                                              dept='" . $_POST['dept'] . "' 
-                                        where id='" . $_REQUEST["id"] . "'");
+                                        where id='" . $_REQUEST["id"] . "'"); 
         echo "<script>alert('Data Updated Successfully')</script>";
     }
 
